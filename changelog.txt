@@ -1,0 +1,6 @@
+V 0.1.1
+  * Apparently Bukkit wants to limit as much server traffic as possible, even rss feeds...
+    
+V 0.1 Initial Release
+  + Configurable Message
+  + Permissions
