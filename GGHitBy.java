@@ -9,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.au_craft.GGHitBy.UpdateChecker;
 
 public final class GGHitBy extends JavaPlugin implements Listener {
-  	public String[] jarVersion = {"0.1"};
+		public String[] jarVersion = {"0.1","0.1.1"};
 		public String hitMessage;
 		protected UpdateChecker updateChecker;
 		
@@ -21,7 +21,7 @@ public final class GGHitBy extends JavaPlugin implements Listener {
 		public void onEnable(){
 			loadConfiguration();
 			this.updateChecker = new UpdateChecker(this, "http://dev.bukkit.org/server-mods/ggdamagechanger/files.rss");
-			if (this.updateChecker.updateNeeded() && getConfig().getBoolean("checkForUpdates")){
+			if (getConfig().getBoolean("checkForUpdates") && this.updateChecker.updateNeeded()){
 				getLogger().info("A new version is available: "+this.updateChecker.getVersion());
 				getLogger().info("Get it from: " + this.updateChecker.getLink());
 			}
