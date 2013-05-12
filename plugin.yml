@@ -1,0 +1,12 @@
+name: GGHitBy
+main: com.au_craft.GGHitBy.GGHitBy
+version: 0.1
+author: GusGold
+
+permissions:
+  GGHB.see:
+      description: Gives ability to see messages
+      default: true
+  GGHB.reload:
+      description: Allows reloading from config
+      default: op
