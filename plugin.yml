@@ -1,12 +1,33 @@
 name: GGHitBy
 main: com.au_craft.GGHitBy.GGHitBy
-version: 0.1.1
+version: 0.2
 author: GusGold
 
+commands:
+  hb:
+    usage: /hb message [true:false]
+  hitby:
+    usage: /hitby message [true:false]
+
 permissions:
-  GGHB.see:
+  GGHB.*:
+      description: Gives full access to GGHitBy
+      default: op
+      children:
+        GGHB.use.*: true
+        GGHB.reload: true
+  GGHB.use.*:
+      description: Gives access to use
+      default: false
+      children:
+        GGHB.use.see: true
+        GGHB.use.toggle: true
+  GGHB.use.see:
       description: Gives ability to see messages
       default: true
-  GGHB.reload:
+  GGHB.use.toggle:
+      description: Allows toggling messages
+      default: true
+  GGHB.admin.reload:
       description: Allows reloading from config
       default: op
